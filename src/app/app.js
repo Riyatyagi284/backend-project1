@@ -29,32 +29,3 @@ app.use('/api/v1', index4);
 app.use(errorHandler);
 
 export default app;
-
-
-
-
-
-
-
-userSchema({
-    name: {
-        type: String,
-    },
-    skills: {
-        type: [string],
-        unique: true,
-        caseSensitive: false
-    },
-})
-
-companySchema({
-    name: {
-        type: String,
-        required: true
-    },
-    project: {
-        type: mongoose.schema.objectId,
-        ref: 'Project',
-        unique: true
-    }
-})
